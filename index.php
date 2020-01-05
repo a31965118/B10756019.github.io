@@ -18,13 +18,10 @@
 <div>
     <table align=center CELLSPACING=20 BORDER=10>
     <tr>
-    <th>書(產品資料)</th>
-    <th>庫存</th>
-    <th>購物車</th>
-    <th>物流資訊</th>
-    <th>顧客資料</th>
-    <th>作者資料</th>
-    <th>出版社資訊</th>
+    <th><a href="book.php">書(產品資料)</a></th>
+    <th><a href="customer.php">顧客資料</th></a>
+    <th><a href="author.php">作者資料</th></a>
+    <th><a href="cart_book.php">購物車系統(消費者區)</th></a>
     </tr>
     </table>
 </div>

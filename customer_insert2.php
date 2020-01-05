@@ -14,21 +14,19 @@
  $dbpass = '';  
  $dbname = 'bookstore1';
 
- $b = $_REQUEST['bookISBN'];
- 
- $pname = $_REQUEST['publisherName'];
- $aname = $_REQUEST['authorName'];
- $year = $_REQUEST['year'];
- $title = $_REQUEST['title'];
- $price = $_REQUEST['price'];
+ $b = $_REQUEST['cId'];
+ $pname = $_REQUEST['email'];
+ $aname = $_REQUEST['cName'];
+ $year = $_REQUEST['phone'];
+ $title = $_REQUEST['address'];
  
  
  $conn = new mysqli("$dbhost","$dbuser","$dbpass","$dbname");
   
   
- $sql = "UPDATE book Set bookISBN = '$b', publisherName = '$pname', authorName = '$aname', year='$year', title = '$title', price = '$price' WHERE bookISBN = '$b'";
-  $result = $conn->query($sql) or die('MySQL update error');
-  echo "已修改!" ;
+  $sql = "INSERT INTO customer(Cid,email,cName,phone,address) VALUES ('$b','$pname','$aname','$year','$title')";
+  $result = $conn->query($sql) or die('MySQL insert error');
+  echo "記錄已經插入" ;
   ?><p></p>
   <p><a href="index.php">回首頁</p></a>
     

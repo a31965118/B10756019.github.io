@@ -14,19 +14,16 @@
  $dbpass = '';  
  $dbname = 'bookstore1';
 
- $b = $_REQUEST['bookISBN'];
- 
- $pname = $_REQUEST['publisherName'];
+ $a = $_REQUEST['Aid'];
  $aname = $_REQUEST['authorName'];
- $year = $_REQUEST['year'];
- $title = $_REQUEST['title'];
- $price = $_REQUEST['price'];
+ $add = $_REQUEST['authorAddress'];
+ $gender = $_REQUEST['gender'];
  
  
  $conn = new mysqli("$dbhost","$dbuser","$dbpass","$dbname");
   
   
- $sql = "UPDATE book Set bookISBN = '$b', publisherName = '$pname', authorName = '$aname', year='$year', title = '$title', price = '$price' WHERE bookISBN = '$b'";
+ $sql = "UPDATE author Set Aid = '$a', authorName = '$aname', authorAddress='$add', gender = '$gender' WHERE Aid = '$a'";
   $result = $conn->query($sql) or die('MySQL update error');
   echo "已修改!" ;
   ?><p></p>

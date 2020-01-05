@@ -55,17 +55,18 @@ body{
 </head>
 <body bgcolor="#F4DECB">
 <header id="header">
-  <h1 style="text-align:center;font-family:Microsoft JhengHei;font-size:54px">產品資訊_刪除</h1>
+  <h1 style="text-align:center;font-family:Microsoft JhengHei;font-size:54px">作者資訊_修改</h1>
 </header>
+
+<p>
+<div>
 <div>
 <table style="border:6px #82FFFF dashed;font-size:1cm;" cellpadding="10" border='1' align=center text-align=center>
 <tr>
-  <th>bookISBN</th>
-  <th>publisherName</th>
+  <th>Aid</th>
   <th>authorName</th>
-  <th>year</th>
-  <th>title</th>
-  <th>price</th>
+  <th>authorAddress</th>
+  <th>gender</th>
   </tr>
   
   
@@ -79,11 +80,11 @@ $dbname = 'bookstore1';
 $conn = new mysqli("$dbhost","$dbuser","$dbpass","$dbname");
 
 
-  $sql = "SELECT * from book";
+  $sql = "SELECT * from author";
   $result = $conn->query($sql) or die('MySQL query error');
   if ($result->num_rows>0){
     while($row = $result-> fetch_assoc()){
-        echo "<tr><td>". $row["bookISBN"] ."</td><td>". $row["publisherName"] ."</td><td>" .$row["authorName"]. "</td><td>" .$row["year"]. "</td><td>" .$row["title"]. "</td><td>" .$row["price"]. "</td></tr>";
+        echo "<tr><td>". $row["Aid"] ."</td><td>" .$row["authorName"]. "</td><td>" .$row["authorAddress"]. "</td><td>" .$row["gender"]. "</td></tr>";
     }
     echo "</table>";
 }
@@ -92,21 +93,25 @@ else{
 }
 ?>
 </table>
-
 </div>
 
-<p>
-
+</div>
 <div align=center>
 </table>
 <form action="" name="form_b" method="Post">
 <div align=center >
-要刪除的bookISBN：<Input Type="text" Name="bookISBN" style="background-color:pink;"><p>
+要修改的Aid：<Input Type="text" Name="Aid" style="background-color:pink;"><p>
 </div>
 <p></p>
+<p></p>
+<p>修改成:</p>
+ Aid：<Input Type="text" Name="Aid"><p>
+ authorName：<Input Type="text" Name="authorName"><p>
+ authorAddress：<Input Type="text" Name="authorAddress"><p>
+ gender：<Input Type="text" Name="gender"><p>
 </form>
 
-<input type="button" value="刪除" type="submit" onclick="form_b.action='book_delete2.php';form_b.submit();"/><p></p>
+<input type="button" value="修改" type="submit" onclick="form_b.action='author_update2.php';form_b.submit();"/><p></p>
 <p><a href="index.php">回首頁</p></a>
 
 

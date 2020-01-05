@@ -24,7 +24,8 @@
  $sql =   "DELETE FROM book Where bookISBN = '$b'";
   $result = $conn->query($sql) or die('MySQL insert error');
   echo "已刪除!" ;
-  ?>
+  ?><p></p>
+  <p><a href="index.php">回首頁</p></a>
     
 </body>
 </html>

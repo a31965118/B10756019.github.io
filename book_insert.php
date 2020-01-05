@@ -74,7 +74,8 @@ body{
  price：<Input Type="text" Name="price"><p>
 </form>
 
-<input type="button" value="新增" type="submit" onclick="form_b.action='book_insert2.php';form_b.submit();"/>
+<input type="button" value="新增" type="submit" onclick="form_b.action='book_insert2.php';form_b.submit();"/><p></p>
+<p><a href="index.php">回首頁</p></a>
 
 
 </div>

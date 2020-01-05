@@ -28,7 +28,8 @@
   $sql = "INSERT INTO book(bookISBN,publisherName,authorName,year,title,price) VALUES ('$b','$pname','$aname','$year','$title','$price')";
   $result = $conn->query($sql) or die('MySQL insert error');
   echo "記錄已經插入" ;
-  ?>
+  ?><p></p>
+  <p><a href="index.php">回首頁</p></a>
     
 </body>
 </html>

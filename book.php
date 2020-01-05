@@ -99,7 +99,8 @@ else{
 <div align=center>
 <input type="button" value="新增" style="width:120px;height:40px;border:3px orange double;background-color:pink;" onclick="location.href='book_insert.php'">
 <input type="button" value="刪除" style="width:120px;height:40px;border:3px orange double;background-color:pink;" onclick="location.href='book_delete.php'">
-<input type="button" value="修改" style="width:120px;height:40px;border:3px orange double;background-color:pink;" onclick="location.href='book_update.php'">
+<input type="button" value="修改" style="width:120px;height:40px;border:3px orange double;background-color:pink;" onclick="location.href='book_update.php'"><p></p>
+<p><a href="index.php">回首頁</p></a>
 
 </div>
 
